@@ -16,6 +16,8 @@ RUN set -x && \
     \
     # Basic check it works.
     kubectl version --client
+COPY skopeo  /usr/local/bin/skopeo && \
+     chmod +x /usr/local/bin/skopeo
 
 USER kubectl
 CMD ["/usr/local/bin/kubectl"]
