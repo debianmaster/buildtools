@@ -26,6 +26,7 @@ RUN yum install -y openssh-clients sudo epel-release && \
 
 EXPOSE 4200
 
+ADD assets/addusers.sh /tmp/addusers.sh
 ADD assets/entrypoint.sh /usr/local/sbin/
 
 ENTRYPOINT ["entrypoint.sh"]
